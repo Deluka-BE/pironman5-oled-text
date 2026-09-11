@@ -1,0 +1,216 @@
+[
+  {
+    "id": "oled_text_examples",
+    "type": "tab",
+    "label": "Pironman OLED tekst",
+    "disabled": false,
+    "info": "Alleen voor de aangepaste add-on. Geen automatische injecties. Pas BASE URL aan als de hostnaam afwijkt."
+  },
+  {
+    "id": "oled_inject_0",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Tekst 30 seconden",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "set-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{\"lines\": [\"Home Assistant\", \"Woonkamer: 21.5 C\", \"Verbruik: 420 W\", \"Voordeur gesloten\"], \"duration\": 30}",
+    "payloadType": "json",
+    "x": 170,
+    "y": 100,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "oled_inject_1",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Blijvende tekst",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "set-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{\"lines\": [\"Welkom thuis!\"], \"duration\": 0}",
+    "payloadType": "json",
+    "x": 170,
+    "y": 170,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "oled_inject_2",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Standaardscherm",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "clear-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{}",
+    "payloadType": "json",
+    "x": 170,
+    "y": 240,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "oled_inject_3",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Tekststatus",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "GET",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "get-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{}",
+    "payloadType": "json",
+    "x": 170,
+    "y": 310,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "oled_prepare",
+    "type": "function",
+    "z": "oled_text_examples",
+    "name": "BASE URL en JSON",
+    "func": "const base = \"http://local-pironman5-text:34001/api/v1.0/\";\nmsg.url = base + msg.topic;\nmsg.headers = {\"Content-Type\": \"application/json\"};\nreturn msg;",
+    "outputs": 1,
+    "x": 450,
+    "y": 200,
+    "wires": [
+      [
+        "oled_http"
+      ]
+    ]
+  },
+  {
+    "id": "oled_http",
+    "type": "http request",
+    "z": "oled_text_examples",
+    "name": "Pironman tekst API",
+    "method": "use",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 690,
+    "y": 200,
+    "wires": [
+      [
+        "oled_debug"
+      ]
+    ]
+  },
+  {
+    "id": "oled_debug",
+    "type": "debug",
+    "z": "oled_text_examples",
+    "name": "Pironman antwoord",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 920,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "oled_catch",
+    "type": "catch",
+    "z": "oled_text_examples",
+    "name": "Verbindingsfout",
+    "scope": [
+      "oled_http"
+    ],
+    "uncaught": false,
+    "x": 690,
+    "y": 290,
+    "wires": [
+      [
+        "oled_debug"
+      ]
+    ]
+  }
+]
