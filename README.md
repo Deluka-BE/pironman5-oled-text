@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="pironman5_text/logo.png" alt="Deluka-BE kameleonlogo" width="128" height="128">
+</p>
+
 # Pironman 5 OLED tekst voor Home Assistant
 
 Een community-uitbreiding voor de SunFounder Pironman 5-add-on: stuur maximaal
