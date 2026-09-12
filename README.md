@@ -20,7 +20,13 @@ Zie [opties en voorbeelden](VISUALS.md). Achttien lokale tests slagen.
 Een eerste gebruiker heeft in versie 0.1.1
 tekstweergave en terugkeer naar het standaardscherm op een Pi bevestigd.
 
-## Installatie
+## Installatie via GitHub
+
+[![Repository toevoegen aan Home Assistant](https://my.home-assistant.io/badges/supervisor_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository=https%3A%2F%2Fgithub.com%2FDeluka-BE%2Fpironman5-oled-text)
+
+**Al lokaal geïnstalleerd?** Volg [overstappen van lokaal naar GitHub](INSTALL_GITHUB.md).
+Alleen de repository toevoegen zet je bestaande installatie niet om.
+
 
 Voeg de URL van deze repository toe via de Home Assistant-add-onwinkel →
 ⋮ → Repositories. Installeer daarna **Pironman 5 OLED tekst (test)**.
