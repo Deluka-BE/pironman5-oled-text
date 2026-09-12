@@ -9,6 +9,11 @@ toe op poort 34001. Gebruik voor Node-RED de hostnaam van DEZE add-on.
 Voorbeeld POST naar set-oled-text:
 `{"lines":["Hallo!"],"duration":30}` met Content-Type application/json.
 
+Nieuw in 0.2.0: voeg `font_size` (8/12/16/24), `icon` en `animation` toe.
+Bijvoorbeeld `{"icon":"heart","animation":"pulse","duration":30}`.
+De animaties wisselen ongeveer één keer per seconde van beeld.
+Zie VISUALS.md in de repository voor alle opties en voorbeelden.
+
 Zie LEESMIJ.md in het downloadpakket voor installatie, instellingenovername,
 Node-RED, testresultaten en terugschakelen. Tien lokale softwaretests geslaagd; een eerste gebruiker heeft tekstweergave
 en terugkeer naar het standaardscherm op een Pi bevestigd. Verdere hardwaretests blijven nodig.

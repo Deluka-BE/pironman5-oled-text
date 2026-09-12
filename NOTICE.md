@@ -28,3 +28,9 @@ Version 0.1.1 restores the Supervisor API access required by the upstream softwa
 
 The extension source is distributed under GPL-2.0-only; see LICENSE.
 Provided without warranty, to the extent permitted by applicable law.
+
+## Community changes — 2026-09-12
+
+Version 0.2.0 adds selectable font sizes, original code-drawn pictograms,
+frame-based icon animations, real Pillow rendering tests and examples.
+The original upstream test fixture remains unchanged.

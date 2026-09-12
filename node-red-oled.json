@@ -212,5 +212,277 @@
         "oled_debug"
       ]
     ]
+  },
+  {
+    "id": "visual_0",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Tekst middel (12)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "set-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{\"lines\": [\"Woonkamer\", \"21.5 C\", \"Licht aan\"], \"font_size\": 12, \"duration\": 30}",
+    "payloadType": "json",
+    "x": 180,
+    "y": 410,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "visual_1",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Tekst groot (16)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "set-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{\"lines\": [\"Woonkamer\", \"21.5 C\"], \"font_size\": 16, \"duration\": 30}",
+    "payloadType": "json",
+    "x": 180,
+    "y": 475,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "visual_2",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Tekst extra groot (24)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "set-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{\"lines\": [\"21.5 C\"], \"font_size\": 24, \"duration\": 30}",
+    "payloadType": "json",
+    "x": 180,
+    "y": 540,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "visual_3",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Thermometer met tekst",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "set-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{\"lines\": [\"21.5 C\", \"Binnen\"], \"font_size\": 16, \"icon\": \"thermometer\", \"duration\": 30}",
+    "payloadType": "json",
+    "x": 180,
+    "y": 605,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "visual_4",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Pulserend hart",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "set-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{\"icon\": \"heart\", \"animation\": \"pulse\", \"duration\": 30}",
+    "payloadType": "json",
+    "x": 180,
+    "y": 670,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "visual_5",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Knipperende waarschuwing",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "set-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{\"lines\": [\"Let op!\"], \"icon\": \"warning\", \"animation\": \"blink\", \"duration\": 30}",
+    "payloadType": "json",
+    "x": 180,
+    "y": 735,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "visual_6",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Draaiende laadindicator",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "set-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{\"lines\": [\"Even geduld\"], \"icon\": \"spinner\", \"animation\": \"spin\", \"duration\": 30}",
+    "payloadType": "json",
+    "x": 180,
+    "y": 800,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
+  },
+  {
+    "id": "visual_7",
+    "type": "inject",
+    "z": "oled_text_examples",
+    "name": "Draaiende ventilator",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "method",
+        "v": "POST",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "set-oled-text",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "payload": "{\"icon\": \"fan\", \"animation\": \"spin\", \"duration\": 30}",
+    "payloadType": "json",
+    "x": 180,
+    "y": 865,
+    "wires": [
+      [
+        "oled_prepare"
+      ]
+    ]
   }
 ]

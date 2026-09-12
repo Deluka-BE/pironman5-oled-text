@@ -24,8 +24,10 @@ def register(app, oled):
             if oled is None:
                 return {'status': False, 'error': 'OLED unavailable'}, 503
             return {'status': True, 'data': oled.set_text(body)}
-        except (ValueError, BadRequest, UnsupportedMediaType):
-            return {'status': False, 'error': 'Invalid JSON/message. Use 1-4 ASCII lines (max 80 characters each), optional duration 0-86400.'}, 400
+        except (BadRequest, UnsupportedMediaType):
+            return {'status': False, 'error': 'Send a JSON object with Content-Type: application/json'}, 400
+        except ValueError as exc:
+            return {'status': False, 'error': str(exc)}, 400
         except RuntimeError as exc:
             return {'status': False, 'error': str(exc)}, 409
 

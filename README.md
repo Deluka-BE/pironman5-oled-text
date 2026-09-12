@@ -15,7 +15,9 @@ hun rechten; deze uitbreiding wordt onder GPLv2 aangeboden, zonder garantie.
 - HTTP-API en een [Node-RED-voorbeeldflow](node-red-oled.json).
 - Respecteert een bewust uitgeschakeld scherm.
 
-Versie **0.1.1**. Tien lokale softwaretests slagen. Een eerste gebruiker heeft
+Versie **0.2.0**: tekstgroottes 8/12/16/24, negen pictogrammen en animaties.
+Zie [opties en voorbeelden](VISUALS.md). Achttien lokale tests slagen.
+Een eerste gebruiker heeft in versie 0.1.1
 tekstweergave en terugkeer naar het standaardscherm op een Pi bevestigd.
 
 ## Installatie
@@ -34,7 +36,8 @@ geïnstalleerde add-on en pas deze aan in de Node-RED-function-node.
 
 ## Tests en licentie
 
-Installeer Flask in een Python-omgeving en voer `python tests/test_oled.py` uit.
+Installeer Flask en Pillow in een Python-omgeving en voer `python tests/test_visuals.py` uit.
+Zie VISUALS.md voor het instellen van het testlettertype.
 De tests simuleren hardware; ze vervangen geen praktijktest op een Raspberry Pi.
 
 GPL-2.0-only, zie [LICENSE](LICENSE). Gebaseerd op SunFounder pironman5 1.2.6,

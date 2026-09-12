@@ -1,6 +1,6 @@
 name: "Pironman 5 OLED tekst (test)"
 description: "Pironman 5 met eigen OLED-tekst vanuit Node-RED"
-version: "0.1.1"
+version: "0.2.0"
 slug: pironman5_text
 arch:
   - aarch64

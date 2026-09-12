@@ -30,5 +30,5 @@ if not config_path.exists() and seed.exists():
 service = Pironman5(config_path=str(config_path))
 register(dashboard_module.__app__, service.pm_auto.oled)
 service.set_debug_level('INFO')
-print('OLED text extension 0.1.1 ready; API port 34001', flush=True)
+print('OLED text extension 0.2.0 ready; API port 34001', flush=True)
 service.start()

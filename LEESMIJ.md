@@ -1,4 +1,4 @@
-# Pironman 5 OLED-tekst — testversie 0.1.1
+# Pironman 5 OLED-tekst — testversie 0.2.0
 
 Dit is een lokaal te bouwen Home Assistant-add-on voor Pironman 5 met
 pironman5 1.2.6, pm_auto 1.2.5 en pm_dashboard 1.2.6. Het pakket bevat broncode,
@@ -38,7 +38,7 @@ add-on beschikbaar om terug te schakelen.
    en stop hem. Start daarna pas de test-add-on. Laat nooit beide tegelijk draaien:
    ze bedienen dezelfde GPIO/I2C/SPI-hardware en ventilatoren.
 7. Controleer het logboek van de test-add-on. Verwacht de drie versies en
-   `OLED text extension 0.1.1 ready; API port 34001`.
+   `OLED text extension 0.2.0 ready; API port 34001`.
    Bij een fout: stop de test-add-on en start de originele opnieuw.
 8. Controleer dat dashboard, ventilatoren en het normale OLED werken.
    Laat automatisch starten voor de testversie voorlopig uit.
@@ -129,7 +129,7 @@ draait, moeten ook eventuele RGB-flows naar de nieuwe hostnaam verwijzen.
 
 ## Verificatie en grenzen
 
-Tien lokale tests geslaagd met de echte OLED-controllerbron van PM_Auto 1.2.5,
+Voor versie 0.1.1 waren tien lokale tests geslaagd met de echte OLED-controllerbron van PM_Auto 1.2.5,
 een gesimuleerde schermdriver en Flask 3.1.3. Getest: tijdelijk/blĳvend,
 vervangen/wissen, verlopen, uitgeschakeld bij opstart en tijdens gebruik,
 slapen, regelbreedte, API-validatie, berichtgrootte en tekenfouten.
@@ -144,7 +144,7 @@ Linux/ARM64, tag 1.2.6, digest
 De Dockerfile gebruikt die digest om wijzigingen aan de tag te vermijden.
 De launcher controleert de drie pakketversies vóór het initialiseren van hardware.
 
-Tests zelf uitvoeren met Python en Flask geïnstalleerd: `python tests/test_oled.py`.
+Voor de actuele tests: zie VISUALS.md (Flask, Pillow en een testlettertype).
 
 ## Broncode en licentie
 
@@ -160,3 +160,9 @@ https://github.com/sunfounder/home-assistant-addon/tree/main/pironman5
 
 De originele Python-bestanden in het image worden niet overschreven. Een launcher
 verbindt een OLED-subklasse en drie nieuwe Flask-routes met de bestaande service.
+
+## Nieuw in 0.2.0
+
+Zie [VISUALS.md](VISUALS.md) voor tekstgrootte, pictogrammen, animaties en
+de 18 bijgewerkte tests. Oude tekstberichten blijven geldig. Hardwarecontrole
+van de nieuwe weergave is nog nodig.
