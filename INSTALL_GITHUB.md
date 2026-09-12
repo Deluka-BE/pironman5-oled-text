@@ -9,7 +9,7 @@ Of handmatig:
 1. Open **Instellingen → Add-ons (of Apps) → Winkel → ⋮ → Repositories**.
 2. Voeg `https://github.com/Deluka-BE/pironman5-oled-text` toe.
 3. Sluit het venster en vernieuw de winkel indien nodig.
-4. Open **Pironman 5 OLED tekst (test)** onder de repository **Pironman 5 OLED tekst**.
+4. Open **Pironman 5 OLED tekst (test)** onder de repository **Deluka's Home Assistant Apps**.
    Kies deze versie, niet dezelfde naam onder **Lokale add-ons**.
 5. Klik **Installeren**. Home Assistant haalt de bestanden van GitHub en bouwt
    de ARM64-container op jouw Pi. Voor deze installatie hoef je geen ZIP te kopiëren.
