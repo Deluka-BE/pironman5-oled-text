@@ -26,6 +26,8 @@ Deze versie verandert niets aan OLED-tekening, animaties of de verversingssnelhe
 - `text.pironman_5_oled_text` — stuur tekst; nieuwe regels worden OLED-regels.
 - `select.pironman_5_oled_icon`, `select.pironman_5_oled_animation` en
   `select.pironman_5_oled_text_size` — wijzigen het actieve bericht.
+- `number.pironman_5_oled_duration` — de resterende tijd van het actieve
+  bericht; `0` houdt het bericht staan.
 - `button.pironman_5_oled_clear` — terug naar het normale statusbeeld.
 
 De exacte entiteitsnamen krijgen Home Assistant zelf bij de installatie. De
