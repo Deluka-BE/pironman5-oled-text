@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Pironman 5",
+        "description": "Enter the hostname shown on the Pironman add-on information page.",
+        "data": {"host": "Add-on hostname", "port": "Port"}
+      }
+    },
+    "error": {"cannot_connect": "Cannot connect to the Pironman add-on"}
+  }
+}
+

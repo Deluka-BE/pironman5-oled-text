@@ -73,6 +73,13 @@ tekstweergave en terugkeer naar het standaardscherm op een Pi bevestigd.
 **Al lokaal geïnstalleerd?** Volg [overstappen van lokaal naar GitHub](INSTALL_GITHUB.md).
 Alleen de repository toevoegen zet je bestaande installatie niet om.
 
+## Rechtstreeks bedienen vanuit Home Assistant
+
+Wil je RGB en OLED als gewone Home Assistant-entiteiten gebruiken, zonder een
+verplichte Node-RED-flow? Installeer de meegeleverde integratie volgens
+[Pironman direct bedienen in Home Assistant](PIRONMAN_HOME_ASSISTANT.md).
+Deze integratie verandert niets aan de bestaande OLED-rendering.
+
 
 Voeg de URL van deze repository toe via de Home Assistant-add-onwinkel →
 ⋮ → Repositories. Installeer daarna **Pironman 5 OLED tekst (test)**.

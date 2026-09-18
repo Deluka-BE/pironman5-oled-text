@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Pironman 5 verbinden",
+        "description": "Vul de hostnaam in die op de informatiepagina van de Pironman-app staat.",
+        "data": {"host": "Hostnaam van de app", "port": "Poort"}
+      }
+    },
+    "error": {"cannot_connect": "Kan geen verbinding maken met de Pironman-app"}
+  }
+}
+

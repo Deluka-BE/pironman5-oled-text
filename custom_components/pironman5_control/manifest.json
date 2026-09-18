@@ -1,0 +1,12 @@
+{
+  "domain": "pironman5_control",
+  "name": "Pironman 5 Control",
+  "codeowners": ["@Deluka-BE"],
+  "config_flow": true,
+  "documentation": "https://github.com/Deluka-BE/pironman5-oled-text",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/Deluka-BE/pironman5-oled-text/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
+
