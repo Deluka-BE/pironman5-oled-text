@@ -12,6 +12,7 @@ Kies **Winkel → ⋮ → Controleren op updates** en vernieuw de pagina.
 | --- | --- | --- |
 | [Pironman 5 OLED tekst (test)](pironman5_text/DOCS.md) | Eigen tekst, tekstgroottes, pictogrammen en animaties op het OLED; RGB-bediening blijft beschikbaar. | Raspberry Pi / aarch64 |
 | [Calories Club Node-RED Bridge](calories-club-bridge/DOCS.md) | OAuth- en MCP-bridge tussen Node-RED en Calories Club. | aarch64, amd64 |
+| [Persoonlijke MCP HAOS](personal_mcp_gateway/DOCS.md) | Persoonlijke MCP voor Hevy, iCloud Calendar, Codex en Spotify. | aarch64, amd64 |
 
 Dit is een aanvullende repository: de apps verschijnen nadat je de repository
 hebt toegevoegd, niet automatisch in iedere Home Assistant-installatie.
@@ -37,6 +38,16 @@ De acht tekstbestanden zijn ongewijzigd overgenomen; deze collectie gebruikt
 een eigen pictogram. Wijzigingen in de bronrepository worden niet automatisch
 gesynchroniseerd: een volgende versie moet ook hier worden bijgewerkt.
 De container wordt geleverd door de in de Dockerfile vermelde bridge-image.
+
+Persoonlijke MCP HAOS 0.2.5 gebruikt de bestaande image
+`ghcr.io/deluka-be/hevy-personal-mcp:0.2.5`. De applicatiebron staat in
+[Deluka-BE/hevy-personal-mcp/main](https://github.com/Deluka-BE/hevy-personal-mcp/tree/main).
+Voor MCP bevat deze repository alleen de Home Assistant-catalogus en verpakking;
+images worden afzonderlijk naar GHCR gepubliceerd. Bestaande releasetags zijn
+onveranderlijk en mogen niet worden overschreven. De oorspronkelijke
+[Home Assistant-catalogus](https://github.com/Deluka-BE/home-assistant-addons)
+blijft beschikbaar als terugvalbron. Deze catalogustoevoeging zet een bestaande
+installatie niet automatisch over; behoud die tot afzonderlijke live validatie.
 
 De informatie over SunFounder en GPLv2 hieronder betreft de Pironman-uitbreiding.
 De winkelpictogrammen zijn voor deze collectie getekend en gebruiken geen
