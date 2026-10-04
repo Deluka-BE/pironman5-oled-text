@@ -31,6 +31,8 @@ en laat slechts één app tegelijk de hardware bedienen.
 
 Nieuwe Home Assistant-apps kunnen als eigen map aan deze collectie worden toegevoegd.
 Losse Node-RED-flows en andere bestanden zijn geen zelfstandige winkelapps.
+Controleer voor een commit de LF-regeleinden van bijgehouden Python-bestanden met
+`python tests/check_python_line_endings.py`.
 
 Calories Club Bridge 0.4.4 is overgenomen uit
 [de eigen bronrepository](https://github.com/Deluka-BE/calories-club-node-red-bridge/tree/766b6a089f8d4ec5673a5f1a1b63fe9248f73378/calories-club-bridge).
