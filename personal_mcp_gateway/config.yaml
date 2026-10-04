@@ -1,7 +1,7 @@
 name: "Persoonlijke MCP HAOS"
 version: "0.2.8"
 slug: "personal_mcp_gateway"
-description: "Persoonlijke Auth0-beveiligde MCP voor Hevy, iCloud Calendar, Codex en Spotify"
+description: "Persoonlijke Auth0-beveiligde MCP voor Hevy, iCloud Calendar en Spotify"
 url: "https://github.com/Deluka-BE/home-assistant-addons"
 arch:
   - amd64
