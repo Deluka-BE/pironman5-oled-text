@@ -2,20 +2,21 @@
 
 ## Toevoegen aan Home Assistant
 
-[Voeg deze repository toe aan Home Assistant](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository=https%3A%2F%2Fgithub.com%2FDeluka-BE%2Fpironman5-oled-text)
+[Voeg de canonieke catalogus toe aan Home Assistant](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository=https%3A%2F%2Fgithub.com%2FDeluka-BE%2Fhome-assistant-apps)
 
 Of handmatig:
 
 1. Open **Instellingen → Add-ons (of Apps) → Winkel → ⋮ → Repositories**.
-2. Voeg `https://github.com/Deluka-BE/pironman5-oled-text` toe.
+2. Voeg `https://github.com/Deluka-BE/home-assistant-apps` toe.
 3. Sluit het venster en vernieuw de winkel indien nodig.
 4. Open **Pironman 5 OLED tekst (test)** onder de repository **Deluka's Home Assistant Apps**.
    Kies deze versie, niet dezelfde naam onder **Lokale add-ons**.
 5. Klik **Installeren**. Home Assistant haalt de bestanden van GitHub en bouwt
    de ARM64-container op jouw Pi. Voor deze installatie hoef je geen ZIP te kopiëren.
 
-De repository bevat de vereiste repository.yaml en een add-onmap met config.yaml
-en Dockerfile. De GitHub-installatie op jouw Home Assistant moet nog worden bevestigd.
+De canonieke catalogus bevat de vereiste `repository.yaml` en de appmap met
+`config.yaml` en `Dockerfile`. Deze bronrepository blijft beschikbaar voor
+lokale installatie en HACS.
 
 ## Je bestaande lokale installatie behouden tijdens de overstap
 

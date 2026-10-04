@@ -9,7 +9,8 @@ Deze versie verandert niets aan OLED-tekening, animaties of de verversingssnelhe
 
 ## Installeren via HACS
 
-1. Installeer eerst de app **Pironman 5 OLED tekst (test)** uit deze repository
+1. Installeer eerst de app **Pironman 5 OLED tekst (test)** uit de
+   [canonieke catalogus](https://github.com/Deluka-BE/home-assistant-apps)
    en start hem.
 2. Voeg in HACS deze GitHub-repository toe als **Integration**:
    `https://github.com/Deluka-BE/pironman5-oled-text`.

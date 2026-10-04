@@ -1,59 +1,8 @@
-# Deluka's Home Assistant Apps
+# Pironman 5 OLED tekst — bronproject
 
-Een eigen collectie apps voor de Home Assistant-winkel.
-
-[![Repository toevoegen aan Home Assistant](https://my.home-assistant.io/badges/supervisor_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository=https%3A%2F%2Fgithub.com%2FDeluka-BE%2Fpironman5-oled-text)
-
-Voeg deze repository eenmaal toe. In de winkel verschijnt daarna de groep
-**Deluka's Home Assistant Apps**. Staat de repository al in je winkel?
-Kies **Winkel → ⋮ → Controleren op updates** en vernieuw de pagina.
-
-| App | Wat doet deze? | Platform |
-| --- | --- | --- |
-| [Pironman 5 OLED tekst (test)](pironman5_text/DOCS.md) | Eigen tekst, tekstgroottes, pictogrammen en animaties op het OLED; RGB-bediening blijft beschikbaar. | Raspberry Pi / aarch64 |
-| [Calories Club Node-RED Bridge](calories-club-bridge/DOCS.md) | OAuth- en MCP-bridge tussen Node-RED en Calories Club. | aarch64, amd64 |
-| [Persoonlijke MCP HAOS](personal_mcp_gateway/DOCS.md) | Persoonlijke MCP voor Hevy, iCloud Calendar en Spotify; aparte `/codex/mcp`-route voor Codex. | aarch64, amd64 |
-
-Dit is een aanvullende repository: de apps verschijnen nadat je de repository
-hebt toegevoegd, niet automatisch in iedere Home Assistant-installatie.
-
-## Bestaande installaties
-
-Toevoegen of verversen van de repository verandert je geïnstalleerde apps niet.
-Een lokale app of een app uit een andere repository is een afzonderlijke
-installatie. Instellingen en OAuth-aanmeldingen worden niet automatisch overgezet.
-Een werkende Calories Club-installatie uit de oorspronkelijke repository mag
-daar blijven; opnieuw installeren is niet nodig. Start geen tweede bridge op
-dezelfde hostpoort. Voor Pironman: volg de [overstaphandleiding](INSTALL_GITHUB.md)
-en laat slechts één app tegelijk de hardware bedienen.
-
-## Onderhoud en bronnen
-
-Nieuwe Home Assistant-apps kunnen als eigen map aan deze collectie worden toegevoegd.
-Losse Node-RED-flows en andere bestanden zijn geen zelfstandige winkelapps.
-Controleer voor een commit de LF-regeleinden van bijgehouden Python-bestanden met
-`python tests/check_python_line_endings.py`.
-
-Calories Club Bridge 0.4.4 is overgenomen uit
-[de eigen bronrepository](https://github.com/Deluka-BE/calories-club-node-red-bridge/tree/766b6a089f8d4ec5673a5f1a1b63fe9248f73378/calories-club-bridge).
-De acht tekstbestanden zijn ongewijzigd overgenomen; deze collectie gebruikt
-een eigen pictogram. Wijzigingen in de bronrepository worden niet automatisch
-gesynchroniseerd: een volgende versie moet ook hier worden bijgewerkt.
-De container wordt geleverd door de in de Dockerfile vermelde bridge-image.
-
-Persoonlijke MCP HAOS 0.2.8 gebruikt de reeds gepubliceerde image
-`ghcr.io/deluka-be/hevy-personal-mcp:0.2.8`. De applicatiebron staat in
-[Deluka-BE/personal-mcp-gateway](https://github.com/Deluka-BE/personal-mcp-gateway).
-Voor MCP bevat deze repository alleen de Home Assistant-catalogus en verpakking;
-images worden afzonderlijk naar GHCR gepubliceerd. Bestaande releasetags zijn
-onveranderlijk en mogen niet worden overschreven. De oorspronkelijke
-[Home Assistant-catalogus](https://github.com/Deluka-BE/home-assistant-addons)
-blijft beschikbaar als terugvalbron. Deze catalogustoevoeging zet een bestaande
-installatie niet automatisch over; behoud die tot afzonderlijke live validatie.
-
-De informatie over SunFounder en GPLv2 hieronder betreft de Pironman-uitbreiding.
-De winkelpictogrammen zijn voor deze collectie getekend en gebruiken geen
-SunFounder- of Calories Club-logo.
+Dit is de bronrepository voor de Pironman 5-app en de HACS-integratie.
+Installeer Home Assistant-apps via de [canonieke catalogus](https://github.com/Deluka-BE/home-assistant-apps).
+De [lokale installatie](LEESMIJ.md) vanuit `pironman5_text/` blijft beschikbaar.
 
 ---
 
@@ -81,7 +30,7 @@ tekstweergave en terugkeer naar het standaardscherm op een Pi bevestigd.
 
 ## Installatie via GitHub
 
-[![Repository toevoegen aan Home Assistant](https://my.home-assistant.io/badges/supervisor_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository=https%3A%2F%2Fgithub.com%2FDeluka-BE%2Fpironman5-oled-text)
+[![Repository toevoegen aan Home Assistant](https://my.home-assistant.io/badges/supervisor_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository=https%3A%2F%2Fgithub.com%2FDeluka-BE%2Fhome-assistant-apps)
 
 **Al lokaal geïnstalleerd?** Volg [overstappen van lokaal naar GitHub](INSTALL_GITHUB.md).
 Alleen de repository toevoegen zet je bestaande installatie niet om.
@@ -94,7 +43,7 @@ verplichte Node-RED-flow? Installeer de meegeleverde integratie volgens
 Deze integratie verandert niets aan de bestaande OLED-rendering.
 
 
-Voeg de URL van deze repository toe via de Home Assistant-add-onwinkel →
+Voeg de URL van de canonieke catalogus toe via de Home Assistant-add-onwinkel →
 ⋮ → Repositories. Installeer daarna **Pironman 5 OLED tekst (test)**.
 Stop vóór het starten de originele Pironman-add-on en schakel daar Watchdog en
 automatisch starten uit. Laat nooit beide tegelijk dezelfde hardware bedienen.
@@ -110,6 +59,8 @@ geïnstalleerde add-on en pas deze aan in de Node-RED-function-node.
 
 Installeer Flask en Pillow in een Python-omgeving en voer `python tests/test_visuals.py` uit.
 Zie VISUALS.md voor het instellen van het testlettertype.
+Controleer ook de LF-regeleinden van bijgehouden Python-bestanden met
+`python tests/check_python_line_endings.py`.
 De tests simuleren hardware; ze vervangen geen praktijktest op een Raspberry Pi.
 
 GPL-2.0-only, zie [LICENSE](LICENSE). Gebaseerd op SunFounder pironman5 1.2.6,
